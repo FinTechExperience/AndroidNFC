@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fhb.mxhacks.firsthackerbank" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".StarActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Saldo"
+            android:label="@string/title_activity_saldo" >
+        </activity>
+        <activity
+            android:name=".Movimientos"
+            android:label="@string/title_activity_movimientos" >
+        </activity>
+        <activity
+            android:name=".Pagar"
+            android:label="@string/title_activity_pagar" >
+        </activity>
+    </application>
+
+</manifest>

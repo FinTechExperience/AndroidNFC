@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <include
+        android:id="@+id/toolbar_actionbar"
+        layout="@layout/toolbar_default"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"/>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar_actionbar">
+
+        <RelativeLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:clickable="true"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/maria"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="María Pérez"
+                android:id="@+id/textView"
+                android:layout_below="@+id/imageView"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="30sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ciudad de México"
+                android:id="@+id/textView1"
+                android:layout_below="@+id/textView"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:textColor="#000000"
+                android:textSize="20sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pagar"
+                android:id="@+id/button"
+                android:textSize="20sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/btn_circle"
+                android:layout_below="@id/textView1"
+                android:layout_marginTop="20dp"
+                android:layout_centerHorizontal="true" />
+
+
+        </RelativeLayout>
+
+        <!-- android:layout_marginTop="?android:attr/actionBarSize"-->
+        <fragment
+            android:id="@+id/fragment_drawer"
+            android:name="com.fhb.mxhacks.firsthackerbank.NavigationDrawerFragment"
+            android:layout_width="@dimen/navigation_drawer_width"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:layout="@layout/fragment_navigation_drawer"/>
+    </android.support.v4.widget.DrawerLayout>
+
+
+
+</RelativeLayout>
